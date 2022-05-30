@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2A5AE04-B44D-4157-89C7-FC9859E6588F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VersionFramework</RootNamespace>
+    <AssemblyName>VersionFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Javie\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5F0EBDD825624E38CA72BE2FC1401AAD71E11CAE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>VersionFramework_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=0.1.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ADGV.0.1.0.10\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasesDatos.cs" />
+    <Compile Include="Capacitacion2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capacitacion2.Designer.cs">
+      <DependentUpon>Capacitacion2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capacitaciones.cs" />
+    <Compile Include="Capacitación.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capacitación.Designer.cs">
+      <DependentUpon>Capacitación.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClaseInventario.cs" />
+    <Compile Include="Correctivos.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HospitalDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HospitalDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Indicadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Indicadores.Designer.cs">
+      <DependentUpon>Indicadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoCapacitaciones.cs" />
+    <Compile Include="IngresoCorrectivos.cs" />
+    <Compile Include="IngresoInventario.cs" />
+    <Compile Include="IngresoPreventivos.cs" />
+    <Compile Include="IngresoRevisionDiaria.cs" />
+    <Compile Include="IngresoSolicitudes.cs" />
+    <Compile Include="Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario.Designer.cs">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento.Designer.cs">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenimiento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenimiento2.Designer.cs">
+      <DependentUpon>Mantenimiento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualesChequeo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualesChequeo.Designer.cs">
+      <DependentUpon>ManualesChequeo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu2.Designer.cs">
+      <DependentUpon>Menu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preventivos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RevisionDiaria.cs" />
+    <Compile Include="Solicitudes.cs" />
+    <EmbeddedResource Include="Capacitacion2.resx">
+      <DependentUpon>Capacitacion2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capacitación.resx">
+      <DependentUpon>Capacitación.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Indicadores.resx">
+      <DependentUpon>Indicadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario.resx">
+      <DependentUpon>Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento.resx">
+      <DependentUpon>Mantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento2.resx">
+      <DependentUpon>Mantenimiento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualesChequeo.resx">
+      <DependentUpon>ManualesChequeo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu2.resx">
+      <DependentUpon>Menu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="HospitalDataSet.xsc">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet.xss">
+      <DependentUpon>HospitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet1.xsc">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet1.xss">
+      <DependentUpon>HospitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet10.xsc">
+      <DependentUpon>HospitalDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet10.xss">
+      <DependentUpon>HospitalDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet11.xsc">
+      <DependentUpon>HospitalDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet11.xss">
+      <DependentUpon>HospitalDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet12.xsc">
+      <DependentUpon>HospitalDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet12.xss">
+      <DependentUpon>HospitalDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet13.xsc">
+      <DependentUpon>HospitalDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet13.xss">
+      <DependentUpon>HospitalDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet14.xsc">
+      <DependentUpon>HospitalDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet14.xss">
+      <DependentUpon>HospitalDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet15.xsc">
+      <DependentUpon>HospitalDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet15.xss">
+      <DependentUpon>HospitalDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet16.xsc">
+      <DependentUpon>HospitalDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet16.xss">
+      <DependentUpon>HospitalDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet17.xsc">
+      <DependentUpon>HospitalDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet17.xss">
+      <DependentUpon>HospitalDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet18.xsc">
+      <DependentUpon>HospitalDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet18.xss">
+      <DependentUpon>HospitalDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet19.xsc">
+      <DependentUpon>HospitalDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet19.xss">
+      <DependentUpon>HospitalDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsc">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet2.xss">
+      <DependentUpon>HospitalDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet20.xsc">
+      <DependentUpon>HospitalDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet20.xss">
+      <DependentUpon>HospitalDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet21.xsc">
+      <DependentUpon>HospitalDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet21.xss">
+      <DependentUpon>HospitalDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet22.xsc">
+      <DependentUpon>HospitalDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet22.xss">
+      <DependentUpon>HospitalDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet23.xsc">
+      <DependentUpon>HospitalDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet23.xss">
+      <DependentUpon>HospitalDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet24.xsc">
+      <DependentUpon>HospitalDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet24.xss">
+      <DependentUpon>HospitalDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet25.xsc">
+      <DependentUpon>HospitalDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet25.xss">
+      <DependentUpon>HospitalDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet26.xsc">
+      <DependentUpon>HospitalDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet26.xss">
+      <DependentUpon>HospitalDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet27.xsc">
+      <DependentUpon>HospitalDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet27.xss">
+      <DependentUpon>HospitalDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet28.xsc">
+      <DependentUpon>HospitalDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet28.xss">
+      <DependentUpon>HospitalDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet29.xsc">
+      <DependentUpon>HospitalDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet29.xss">
+      <DependentUpon>HospitalDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsc">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet3.xss">
+      <DependentUpon>HospitalDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet30.xsc">
+      <DependentUpon>HospitalDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet30.xss">
+      <DependentUpon>HospitalDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet31.xsc">
+      <DependentUpon>HospitalDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet31.xss">
+      <DependentUpon>HospitalDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet32.xsc">
+      <DependentUpon>HospitalDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet32.xss">
+      <DependentUpon>HospitalDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsc">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet4.xss">
+      <DependentUpon>HospitalDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet5.xsc">
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet5.xss">
+      <DependentUpon>HospitalDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsc">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet6.xss">
+      <DependentUpon>HospitalDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet7.xsc">
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet7.xss">
+      <DependentUpon>HospitalDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet8.xsc">
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet8.xss">
+      <DependentUpon>HospitalDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet9.xsc">
+      <DependentUpon>HospitalDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="HospitalDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HospitalDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HospitalDataSet9.xss">
+      <DependentUpon>HospitalDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VersionFramework_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
